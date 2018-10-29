@@ -70,7 +70,7 @@ def binomial_grid(n, p, up, price0):
         pos_higher[k] = (v[0], v[1]+y_off)
     labels = nx.draw_networkx_labels(G, pos=pos_higher,
                 labels=G2_prices_labels, 
-                font_size=8, font_family="Arial", font_color='b'
+                font_size=8, font_family="DejaVu Sans", font_color='b'
                 )
 
     nx.draw(G2, pos=posG,

@@ -59,11 +59,11 @@ u=widgets.FloatSlider(min=1.0,  max=2.0, step=0.01, value=1.05, description="u")
 d=widgets.FloatSlider(min=0.1,  max=1.0, step=0.1,  value=0.95, description="d")
 p=widgets.FloatSlider(min=0.0,  max=1.0, step=0.1,  value=0.5,  description="up prob")
 T=widgets.IntSlider(min=5,    max=100,   step=5,    value=25,   description='Time steps')
-N=widgets.IntSlider(min=1000, max=10000, step=1000, value=5000, description='Sim. size')
+N=widgets.IntSlider(min=10000, max=100000, step=10000, value=5000, description='Sim. size')
 P=widgets.IntSlider(min=10,   max=100,   step=10,   value=40,   description='Paths displayed')
 ui1 = widgets.HBox([S0, u, p, d])
 ui2 = widgets.HBox([T, N, P])
 ui  = widgets.VBox([ui1, ui2])
 
 out = interactive_output(animate, {'S0': S0, 'u': u, 'd': d, 'p': p, 'T': T, 'N': N, 'P': P})
-
+display(ui, out)
